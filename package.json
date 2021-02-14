@@ -1,0 +1,24 @@
+{
+  "name": "jhonny-five-testing",
+  "version": "1.0.0",
+  "description": "Testing project",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run build-test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Davhec363/jhonny-five-testing.git"
+  },
+  "keywords": [
+    "testing",
+    "jhonny-five",
+    "iot"
+  ],
+  "author": "Héctor Andrade",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Davhec363/jhonny-five-testing/issues"
+  },
+  "homepage": "https://github.com/Davhec363/jhonny-five-testing#readme"
+}
