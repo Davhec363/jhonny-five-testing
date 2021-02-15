@@ -19,6 +19,12 @@ board.on('ready', function() {
     // LED Pin variable
     const led = new five.Led('P1-7');
 
+    // Adds a peripheral called 'led' to Johnny Telegram
+    johnnyTelegram.add('led', led);
+
+    // This will set Johnny Telegram events like receiving a message from Telegram
+    johnnyTelegram.bindEvents();
+
     led.on();
 
     this.repl.inject({
