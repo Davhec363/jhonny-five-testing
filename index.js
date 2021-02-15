@@ -52,6 +52,9 @@ board.on('ready', function() {
         fadeOut: () => {
             led.fadeOut(5000);
             led.stop().off();
+        },
+        telegram: () => {
+
         }
     });
 
