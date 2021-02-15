@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/Davhec363/jhonny-five-testing/issues"
   },
-  "homepage": "https://github.com/Davhec363/jhonny-five-testing#readme"
+  "homepage": "https://github.com/Davhec363/jhonny-five-testing#readme",
+  "dependencies": {
+    "johnny-five": "^2.0.0",
+    "raspi-io": "^11.0.0"
+  }
 }
