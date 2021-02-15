@@ -50,8 +50,8 @@ board.on('ready', function() {
             led.fadeIn(5000);
         },
         fadeOut: () => {
-            led.stop().off();
             led.fadeOut(5000);
+            led.stop().off();
         }
     });
 
