@@ -2,7 +2,7 @@
 const five = require('johnny-five');
 const { RaspiIO } = require('raspi-io');
 
-const johnnyTelegram = require('./libs/telegram/johnny-telegram');
+const johnnyTelegram = require('./libs/telegram/johnny-telegram.js');
 const TelegramBot = require('node-telegram-bot-api');
 
 // Make a new `Board()` instance and use raspi-io
@@ -12,6 +12,7 @@ const board = new five.Board({
 
 // Creates a new Telegram Bot
 var bot = new TelegramBot('1668835870:AAHhckIWkGHeujLvyQrECRqoQgtHgHwgkw4', { polling: true });
+johnnyTelegram.init(bot);
 
 // Run Board
 board.on('ready', function() {
@@ -64,13 +65,6 @@ board.on('ready', function() {
         fadeOut: () => {
             led.fadeOut(5000);
             led.stop().off();
-        },
-        telegram: () => {
-            // Adds a peripheral called 'led' to Johnny Telegram
-            johnnyTelegram.add('led', led);
-
-            // This will set Johnny Telegram events like receiving a message from Telegram
-            johnnyTelegram.bindEvents();
         }
     });
 
