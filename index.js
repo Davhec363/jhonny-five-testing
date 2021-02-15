@@ -36,7 +36,7 @@ board.on('ready', function() {
         fade: () => {
             led.fade({
                 easing: "outSine",
-                duration: 1000,
+                duration: 6000,
                 cuePoints: [0, 0.2, 0.4, 0.6, 0.8, 1],
                 keyFrames: [0, 250, 25, 150, 100, 125],
                 onstop: function() {
