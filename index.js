@@ -34,8 +34,15 @@ board.on('ready', function() {
             led.blink(500);
         },
         fade: () => {
-            led.stop().off();
-            led.fade(128, 2000);
+            led.fade({
+                easing: "outSine",
+                duration: 1000,
+                cuePoints: [0, 0.2, 0.4, 0.6, 0.8, 1],
+                keyFrames: [0, 250, 25, 150, 100, 125],
+                onstop: function() {
+                    console.log("Animation stopped");
+                }
+            });
         }
     });
 
