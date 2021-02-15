@@ -34,15 +34,24 @@ board.on('ready', function() {
             led.blink(500);
         },
         fade: () => {
+            led.stop().off();
             led.fade({
                 easing: "outSine",
-                duration: 6000,
+                duration: 12000,
                 cuePoints: [0, 0.2, 0.4, 0.6, 0.8, 1],
                 keyFrames: [0, 250, 25, 150, 100, 125],
                 onstop: function() {
                     console.log("Animation stopped");
                 }
             });
+        },
+        fadeIn: () => {
+            led.stop().off();
+            led.fadeIn(5000);
+        },
+        fadeOut: () => {
+            led.stop().off();
+            led.fadeOut(5000);
         }
     });
 
